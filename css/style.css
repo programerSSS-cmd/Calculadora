@@ -1,0 +1,89 @@
+/* Reset básico e centralização na tela */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container principal da calculadora */
+.calculator {
+    width: 320px;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Visor do Resultado */
+.result {
+    color: #fff;
+    font-size: 3rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow-x: hidden;
+    background-color: #333333;
+    border-radius: 10px;
+    height: 40px;
+}
+
+/* Grade de botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas iguais */
+    gap: 12px;
+    /* Espaço entre os botões */
+}
+
+/* Estilo base de todos os botões */
+button {
+    height: 65px;
+    border: none;
+    border-radius: 50px;
+    /* Botões arredondados estilo iPhone */
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.3);
+    /* Brilha um pouco ao passar o rato */
+}
+
+/* Cores específicas baseadas nas tuas classes */
+.bg-gray {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.bg-light-gray {
+    background-color: #333333;
+    color: white;
+}
+
+.bg-orange {
+    background-color: #ff9f0a;
+    color: white;
+}
+
+/* O botão Zero que ocupa duas colunas */
+.button-zero {
+    grid-column: span 2;
+    text-align: left;
+    padding-left: 30px;
+}
+
+button.bg-gray:nth-child(2) {
+    font-family: "Times New Roman", serif;
+    /* Dá um aspeto mais matemático */
+    font-style: italic;
+    font-size: 2.3rem;
+    /* Ajusta se achares que está pequeno */
+}
